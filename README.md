@@ -27,6 +27,8 @@ Parameters:
 
 ```bash
 -r : REST api call
+-h : print help
+
 ```
 
 ## Contributing
