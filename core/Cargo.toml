@@ -1,11 +1,9 @@
 [package]
-name = "core"
+name = "ccurl"
 version = "0.2.0"
 authors = ["OmarAouini <aouini.omar93@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-serde = {version = "1.0.126", features = ["derive", ]}
-serde_json = "1.0.64"
 ureq = {version = "2.1.1", features = ["json", "charset"] }
 json-color = "0.7.1"
