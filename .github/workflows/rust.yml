@@ -21,8 +21,19 @@ jobs:
       run: cargo build --release --verbose
     - name: Run tests
       run: cargo test --verbose
-    - name: zipping
-      run: zip ./core/target/release/ ccurl README.md
+    - name: Zip Release
+      uses: TheDoctor0/zip-release@0.4.2
+      with:
+       # Filename for archive
+       filename: ccurl.zip
+       # Base path for archive files
+       path: .
+       # Working directory before zipping
+       directory: ./core/target/release
+       # List of excluded files / directories
+       exclusions: ""
+       # Tool to use for archiving
+       type: zip
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
