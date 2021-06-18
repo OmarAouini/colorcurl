@@ -3,7 +3,7 @@
 
 # ColorCurl
 
-colorcurl (ccurl) is a CLI utlity that pretty print colored http calls and rest api pulls, made with Rust.
+colorcurl (ccurl) is a CLI utlity that pretty print colored http calls and rest api pulls.
 
 ## Installation
 
@@ -11,14 +11,16 @@ Just download the executable for your platform and run it from the console.
 Example rest api call:<br>
 cd into the same folder of the executable:
 ```bash
-./ccurl -r http://api_path_to_be_called/resource/1
+./ccurl -r https://jsonplaceholder.typicode.com/todos/1
 ```
-Example response:
+Example response (colored):
 
 ```json
-{
-  "foo" : "foo_foo",
-  "bar" : "bar_bar"
+Values: {
+  "userId": 1,
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
 }
 ```
 
