@@ -27,7 +27,7 @@ Parameters:
 
 ```bash
 -r : REST api call
--h : print help
+-h : print help-message
 
 ```
 
