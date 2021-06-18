@@ -1,4 +1,4 @@
-use std::env;
+use std::{env, process::exit};
 use clients::rest_client;
 use json_color::{Color, Colorizer};
 
@@ -7,7 +7,11 @@ pub mod clients;
 fn main() {
 
     let args: Vec<String> = env::args().collect();
-    println!("{:?}", args);
+
+    if args.get(1).is_none() {
+        println!("the -command arg is missing");
+        exit(-1)
+    }
 
     let command = args.get(1).unwrap().as_str();
 
@@ -22,14 +26,23 @@ fn main() {
             .key(Color::Blue)
             .build();
 
-    //REST call
-    match rest_client::rest_call(args.get(2).unwrap()) {
-        Ok(value) => {
-            let colorized_value = colorizer.colorize_json_str(&value);
-            println!("{}", format!("Values: {}", colorized_value.unwrap()))
-        },
-        Err(e) => {println!("{}", format!("Error: {}", e))},
+    let second_arg = args.get(2);
+    if second_arg.is_some() {
+
+        //REST call
+        match rest_client::rest_call(second_arg.unwrap()) {
+            Ok(value) => {
+                let colorized_value = colorizer.colorize_json_str(&value);
+                println!("{}", format!("Values: {}", colorized_value.unwrap()))
+            },
+            Err(e) => {println!("{}", format!("Error: {}", e))},
+        }
+    } else {
+        println!("the url arg is missing!")
     }
+    
+} else if command.eq("-h") || command.eq("-H") {
+    println!("the following commands are avaliable:\n -r --> REST api call\n -h --> show help\n")
 } else {
     println!("error, unknown parameters!")
 }
