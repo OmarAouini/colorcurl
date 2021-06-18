@@ -1,4 +1,5 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![.github/workflows/rust.yml](https://github.com/OmarAouini/colorcurl/actions/workflows/rust.yml/badge.svg?branch=main)](https://github.com/OmarAouini/colorcurl/actions/workflows/rust.yml)
 <br>
 
 # ColorCurl
