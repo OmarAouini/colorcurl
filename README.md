@@ -3,7 +3,7 @@
 
 # ColorCurl
 
-colorcurl (ccurl) is a CLI utlity that pretty print colored http calls and rest api pulls, made with Rust.
+colorcurl (ccurl) is a CLI utlity that pretty print colored http calls and rest api pulls.
 
 ## Installation
 
