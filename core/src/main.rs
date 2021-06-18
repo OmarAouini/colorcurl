@@ -9,7 +9,7 @@ fn main() {
     let args: Vec<String> = env::args().collect();
 
     if args.get(1).is_none() {
-        println!("the -command arg is missing");
+        println!("the -command arg is missing!\nuse -h for help");
         exit(-1)
     }
 
@@ -38,13 +38,13 @@ fn main() {
             Err(e) => {println!("{}", format!("Error: {}", e))},
         }
     } else {
-        println!("the url arg is missing!")
+        println!("the url arg is missing!\n use -h for help")
     }
     
 } else if command.eq("-h") || command.eq("-H") {
-    println!("the following commands are avaliable:\n -r --> REST api call\n -h --> show help\n")
+    println!("the following commands are avaliable:\n -r --> REST api call\n -h --> show help\nexample for -r: ./ccurl -r https://jsonplaceholder.typicode.com/todos/1")
 } else {
-    println!("error, unknown parameters!")
+    println!("error, unknown parameters!\nuse -h for help")
 }
     
 }
