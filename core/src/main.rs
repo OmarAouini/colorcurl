@@ -4,6 +4,7 @@ use json_color::{Color, Colorizer};
 
 pub mod clients;
 
+
 fn main() {
 
     let args: Vec<String> = env::args().collect();
