@@ -14,16 +14,9 @@ cd into the same folder of the executable:
 ```bash
 ./ccurl -r https://jsonplaceholder.typicode.com/todos/1
 ```
-Example response (colored):
+Example response:
 
-```json
-Values: {
-  "userId": 1,
-  "id": 1,
-  "title": "delectus aut autem",
-  "completed": false
-}
-```
+![Image](example.png)
 
 ## Usage:
 Parameters:
