@@ -13,6 +13,8 @@ Example rest api call:<br>
 cd into the same folder of the executable:
 ```bash
 ./ccurl -r https://jsonplaceholder.typicode.com/todos/1
+./ccurl -rw https://jsonplaceholder.typicode.com/todos/1 /path/to/file/location/
+
 ```
 Example response:
 
@@ -23,6 +25,7 @@ Parameters:
 
 ```bash
 -r : REST api call
+-rw: Write the REST result to a file, given a path
 -h : print help-message
 
 ```
