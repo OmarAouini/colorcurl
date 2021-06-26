@@ -10,7 +10,7 @@ colorcurl (ccurl) is a CLI utlity that pretty print colored http calls and rest 
 
 Just download the executable for your platform and run it from the console.
 Example rest api call:<br>
-cd into the same folder of the executable:
+cd into the same folder of the executable (or just put the executable in your &PATH):
 ```bash
 ./ccurl -r https://jsonplaceholder.typicode.com/todos/1
 ./ccurl -rw https://jsonplaceholder.typicode.com/todos/1 /path/to/file/location/
