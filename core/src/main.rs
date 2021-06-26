@@ -12,9 +12,12 @@ fn main() {
         exit(-1)
     }
 
-    let command = args.get(1)?.as_str();
+
+
+    let command = args.get(1).unwrap().as_str();
 
     if command.eq("-r") || command.eq("-R") {
+
         //json color config
         let colorizer = Colorizer::new()
             .null(Color::Purple)
@@ -27,10 +30,10 @@ fn main() {
         let second_arg = args.get(2);
         if second_arg.is_some() {
             //REST call
-            match rest_client::rest_call(second_arg?) {
+            match rest_client::rest_call(second_arg.unwrap()) {
                 Ok(value) => {
                     let colorized_value = colorizer.colorize_json_str(&value);
-                    println!("{}", format!("Values: {}", colorized_value?))
+                    println!("{}", format!("Values: {}", colorized_value.unwrap()))
                 }
                 Err(e) => {
                     println!("{}", format!("Error: {}", e))
