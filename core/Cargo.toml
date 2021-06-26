@@ -1,6 +1,6 @@
 [package]
 name = "ccurl"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["OmarAouini <aouini.omar93@gmail.com>"]
 edition = "2018"
 
