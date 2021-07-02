@@ -22,4 +22,24 @@ jobs:
     - name: Run tests
       run: cargo test --verbose
       working-directory: ./core/
+      
+  pre-release:
+    name: "Pre Release"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - name: "Build relase"
+        run: |
+          cargo build --release
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            LICENSE.txt
+            ./core/target/ccurl
+
 
